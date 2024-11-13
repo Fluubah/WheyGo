@@ -1,0 +1,284 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #121212;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 800px;
+    margin: 80px auto;
+    background: #1e1e1e;
+    padding: 40px 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+p {
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu li a {
+    color: #cccccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #1e90ff;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    margin-bottom: 5px;
+    transition: all 0.3s;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+select, input[type="text"], button {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-top: 5px;
+    background-color: #2e2e2e;
+    color: #ffffff;
+    appearance: none;
+}
+
+select:focus, input[type="text"]:focus {
+    border-color: #1e90ff;
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.custom-select {
+    position: relative;
+}
+
+.custom-select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    font-weight: normal;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #1e90ff;
+}
+
+button[type="submit"] {
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    border-radius: 6px;
+    padding: 12px 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0066cc;
+}
+
+/* Results Styles */
+#results {
+    margin-top: 40px;
+}
+
+#results h2 {
+    margin-bottom: 30px;
+}
+
+.option {
+    background-color: #2e2e2e;
+    padding: 20px 30px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s;
+}
+
+.option:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.option p {
+    margin: 0 0 10px;
+    color: #ffffff;
+}
+
+.option a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.option a:hover {
+    text-decoration: underline;
+}
+
+/* About Us Section */
+.about-section {
+    background-color: #1e1e1e;
+    padding: 60px 20px;
+}
+
+.about-section h2 {
+    color: #ffffff;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #cccccc;
+}
+
+/* Footer (Optional) */
+footer {
+    background-color: #1e1e1e;
+    padding: 20px 0;
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+    border-top: 1px solid #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 10px 20px;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #1e1e1e;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    .nav-menu li {
+        margin: 0;
+    }
+
+    .nav-menu li a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-menu li a:hover {
+        background-color: #2e2e2e;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Toggle Menu Open State */
+    .nav-container.active .nav-menu {
+        display: flex;
+    }
+
+    .container {
+        margin: 60px 20px;
+        padding: 30px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
